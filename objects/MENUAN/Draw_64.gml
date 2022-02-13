@@ -1,0 +1,1 @@
+draw_sprite_ext(_ENEMY,0,400,180,0.48,0.48,0,c_white,1)

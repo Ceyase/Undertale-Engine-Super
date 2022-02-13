@@ -1,0 +1,18 @@
+///@arg y
+///@arg size
+///@arg dir
+///@arg spd
+///@arg mode
+///@arg destroy
+function MakeBoneRight() {
+	var yy = argument[0];
+	var size = argument[1];
+	var dir = argument[2]
+	var spd = argument[3];
+	var mode = argument[4];
+	var ds = argument[5];
+
+	MakeBoneH(battle_board.x+battle_board.right-size-7,yy,size,dir,spd,mode,0,ds)
+
+
+}
