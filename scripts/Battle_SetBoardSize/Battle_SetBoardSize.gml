@@ -17,28 +17,28 @@ function Battle_SetBoardSize() {
 		if(TIME==0){
 			battle_board.up=U;
 		}else{
-			Anim_New(battle_board,"up",0,0,battle_board.up,U-battle_board.up,TIME);
+			Anim_Create(battle_board,"up",0,0,battle_board.up,U-battle_board.up,TIME);
 		}
 	}
 	if(is_real(D)){
 		if(TIME==0){
 			battle_board.down=D;
 		}else{
-			Anim_New(battle_board,"down",0,0,battle_board.down,D-battle_board.down,TIME);
+			Anim_Create(battle_board,"down",0,0,battle_board.down,D-battle_board.down,TIME);
 		}
 	}
 	if(is_real(L)){
 		if(TIME==0){
 			battle_board.left=L;
 		}else{
-			Anim_New(battle_board,"left",0,0,battle_board.left,L-battle_board.left,TIME);
+			Anim_Create(battle_board,"left",0,0,battle_board.left,L-battle_board.left,TIME);
 		}
 	}
 	if(is_real(R)){
 		if(TIME==0){
 			battle_board.right=R;
 		}else{
-			Anim_New(battle_board,"right",0,0,battle_board.right,R-battle_board.right,TIME);
+			Anim_Create(battle_board,"right",0,0,battle_board.right,R-battle_board.right,TIME);
 		}
 	}
 

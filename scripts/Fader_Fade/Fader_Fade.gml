@@ -14,7 +14,7 @@ function Fader_Fade() {
 		START=fader.alpha;
 	}
 
-	Anim_New(fader,"alpha",0,0,START,TARGET-START,TIME,DELAY);
+	Anim_Create(fader,"alpha",0,0,START,TARGET-START,TIME,DELAY);
 
 	return true;
 

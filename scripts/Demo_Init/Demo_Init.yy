@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Anim",
-    "path": "folders/脚本/GMU/Anim.yy",
+    "name": "Demo",
+    "path": "folders/脚本/Demo.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Anim_Stop",
+  "name": "Demo_Init",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -23,7 +23,7 @@ function Border_SetSprite() {
 
 	if(FADE){
 		border._alpha=0;
-		Anim_New(border,"_alpha",0,0,0,1,TIME);
+		Anim_Create(border,"_alpha",0,0,0,1,TIME);
 	}
 
 	return true;

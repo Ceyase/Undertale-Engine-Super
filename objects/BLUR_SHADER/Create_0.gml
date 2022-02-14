@@ -13,7 +13,7 @@ var_resolution_y = 480
 uni_blur_amount_hoz = shader_get_uniform(shd_gaussian_vertical,"blur_amount");
 uni_blur_amount_vert = shader_get_uniform(shd_gaussian_horizontal,"blur_amount");
 var_blur_amount = 0.5;
-Anim_New(id,"var_blur_amount",2,1,2,-2,30)
+Anim_Create(id,"var_blur_amount",2,1,2,-2,30)
 
 final_surface = application_surface//surface_create(640,480);
 
