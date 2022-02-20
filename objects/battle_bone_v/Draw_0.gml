@@ -9,13 +9,13 @@ else{
 
 var color;
 if(mode = 0){
-	color =make_color_rgb(30,30,30);
+	color = c_white;
 }
 if(mode = 1){
-	color = make_color_rgb(78,108,196);
+	color = c_blue;
 }
 if(mode = 2){
-	color = make_color_rgb(192,142,83);
+	color = c_orange;
 }
 
 if(out = 0){

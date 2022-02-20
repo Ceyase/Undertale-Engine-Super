@@ -6,3 +6,4 @@ a = 70000
 DEBUG = 0
 ca = 0
 ca1 = 0
+color = c_white
