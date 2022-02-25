@@ -11,7 +11,7 @@ if (c_m == 0)
         SPD = (Input_Check(5) ? (SPD / 2) : SPD)
         repeat (SPD * 10)
         {
-            if Input_CheckPressed(0)
+            if keyboard_check_pressed(0)
                 dir = 1
             if Input_Check(1)
                 dir = 2

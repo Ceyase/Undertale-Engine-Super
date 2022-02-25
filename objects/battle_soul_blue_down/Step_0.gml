@@ -3,7 +3,7 @@
 event_inherited()
 
 var SPD;
-if(Input_Check(INPUT.CANCEL) = 1){
+if(Input_Check(ord("X")) = 1){
 	SPD = 1;
 }
 else{
@@ -11,14 +11,14 @@ else{
 }
 var _temp_local_var_1,_temp_local_var_2,_temp_local_var_3,_temp_local_var_4
 if(Battle_GetState()==BATTLE_STATE.IN_TURN && moveable){
-if Input_Check(INPUT.LEFT)
+if Input_Check(vk_left)
 {
     _temp_local_var_1 = 2.5
             if (! place_meeting((x - 2), y, block))
                 x -= SPD;
             _temp_local_var_1 = (_temp_local_var_1 - 1)
 }
-if Input_Check(INPUT.RIGHT)
+if Input_Check(vk_right)
 {
     _temp_local_var_2 = 2.5
             if (! place_meeting((x + 2), y, block))
@@ -43,7 +43,7 @@ if place_meeting(x, (y - 1), block)
 if place_meeting(x, (y + 1), block)||place_meeting(x, (y + 0.1), battle_plate)
 {
     _move = 0
-	   if Input_Check(INPUT.UP)_move = (- _speed_jump)
+	   if Input_Check(vk_up)_move = (- _speed_jump)
 		if(shake = 1){
 			instance_create_depth(0,0,0,camera_shaker);
 			audio_play_sound(snd_dong,0,0);
@@ -55,7 +55,7 @@ else
     if (_move < 0)
     {
         _move = (_move + _gravity_jump)
-        if (! Input_Check(INPUT.UP))
+        if (! Input_Check(vk_up))
             _move = 0
     }
     else

@@ -5,16 +5,16 @@ Console_SetStatusRatio(1,8/11);
 Console_SetStatusRatio(2,11/11);
 
 Input_Init();
-Input_Bind(INPUT.CONFIRM,INPUT_TYPE.KEYBOARD,0,vk_enter);
-Input_Bind(INPUT.CONFIRM,INPUT_TYPE.KEYBOARD,0,ord("Z"));
-Input_Bind(INPUT.CANCEL,INPUT_TYPE.KEYBOARD,0,vk_shift);
-Input_Bind(INPUT.CANCEL,INPUT_TYPE.KEYBOARD,0,ord("X"));
-Input_Bind(INPUT.MENU,INPUT_TYPE.KEYBOARD,0,vk_control);
-Input_Bind(INPUT.MENU,INPUT_TYPE.KEYBOARD,0,ord("C"));
-Input_Bind(INPUT.UP,INPUT_TYPE.KEYBOARD,0,vk_up);
-Input_Bind(INPUT.DOWN,INPUT_TYPE.KEYBOARD,0,vk_down);
-Input_Bind(INPUT.LEFT,INPUT_TYPE.KEYBOARD,0,vk_left);
-Input_Bind(INPUT.RIGHT,INPUT_TYPE.KEYBOARD,0,vk_right);
+Input_Bind(ord("Z"),INPUT_TYPE.KEYBOARD,0,vk_enter);
+Input_Bind(ord("Z"),INPUT_TYPE.KEYBOARD,0,ord("Z"));
+Input_Bind(ord("X"),INPUT_TYPE.KEYBOARD,0,vk_shift);
+Input_Bind(ord("X"),INPUT_TYPE.KEYBOARD,0,ord("X"));
+Input_Bind(ord("C"),INPUT_TYPE.KEYBOARD,0,vk_control);
+Input_Bind(ord("C"),INPUT_TYPE.KEYBOARD,0,ord("C"));
+Input_Bind(vk_up,INPUT_TYPE.KEYBOARD,0,vk_up);
+Input_Bind(vk_down,INPUT_TYPE.KEYBOARD,0,vk_down);
+Input_Bind(vk_left,INPUT_TYPE.KEYBOARD,0,vk_left);
+Input_Bind(vk_right,INPUT_TYPE.KEYBOARD,0,vk_right);
 
 Lang_Init();
 Lang_LoadList();

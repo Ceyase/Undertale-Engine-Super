@@ -1,3 +1,3 @@
-if(Input_CheckPressed(INPUT.CONFIRM)){
+if(keyboard_check_pressed(ord("Z"))){
 	room_goto_next();
 }

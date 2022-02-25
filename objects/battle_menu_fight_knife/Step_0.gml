@@ -5,7 +5,7 @@ if(_input_acceptable){
 			_input_acceptable=false;
 	}
 	
-	if(Input_CheckPressed(INPUT.CONFIRM)&&_input_acceptable){
+	if(keyboard_check_pressed(ord("Z"))&&_input_acceptable){
 		Anim_Stop(id,"_aim_x");
 		alarm[0]=1;
 		

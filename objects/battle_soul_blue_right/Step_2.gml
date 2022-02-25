@@ -5,6 +5,6 @@
 if place_meeting(x-0.1, y, battle_plate_green)
 {
 	_move = 0;
-	if Input_Check(INPUT.UP)_move = (- _speed_jump);
+	if Input_Check(vk_up)_move = (- _speed_jump);
 		y += battle_plate_green.yprevious - battle_plate_green.y;
 }

@@ -1,16 +1,16 @@
 var can_move=(moveable&&_moveable_dialog&&_moveable_menu&&_moveable_save&&_moveable_warp&&_moveable_encounter&&_moveable_box);
 if(can_move){
-	if(Input_Check(INPUT.UP)){
+	if(Input_Check(vk_up)){
 		move[DIR.UP]=2;
-	}else if(Input_Check(INPUT.DOWN)){
+	}else if(Input_Check(vk_down)){
 		move[DIR.DOWN]=2;
 	}
-	if(Input_Check(INPUT.LEFT)){
+	if(Input_Check(vk_left)){
 		move[DIR.LEFT]=2;
-	}else if(Input_Check(INPUT.RIGHT)){
+	}else if(Input_Check(vk_right)){
 		move[DIR.RIGHT]=2;
 	}
-	if(Input_CheckPressed(INPUT.CONFIRM)){
+	if(keyboard_check_pressed(ord("Z"))){
 		var inst=noone;
 		if(dir==DIR.UP){
 			inst=collision_rectangle(x-sprite_width/2+4,y-5,x+sprite_width/2-4,y-sprite_height+5,char,false,true);
@@ -31,7 +31,7 @@ if(can_move){
 		}
 	}
 	if(!instance_exists(ui_dialog)){
-		if(Input_CheckPressed(INPUT.MENU)){
+		if(keyboard_check_pressed(ord("C"))){
 			instance_create_depth(0,0,0,ui_menu);
 		}
 	}

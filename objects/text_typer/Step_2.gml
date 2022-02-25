@@ -2,20 +2,20 @@ _voice_played=false;
 
 event_user(4);
 
-if(_paused&&Input_IsPressed(INPUT.CONFIRM)){
+if(_paused&&keyboard_check_pressed(ord("Z"))){
 	_paused=false;
 }
-if(_skippable&&!_paused&&Input_IsPressed(INPUT.CANCEL)){
+if(_skippable&&!_paused&&keyboard_check_pressed(ord("X"))){
 	_skipping=true;
 	_sleep=0;
 	_char_frame_remain=0;
 }
 if(_choice!=-1){
-	if((_choice==0&&Input_IsPressed(INPUT.RIGHT))||(_choice==1&&Input_IsPressed(INPUT.LEFT))){
+	if((_choice==0&&keyboard_check_pressed(vk_right))||(_choice==1&&keyboard_check_pressed(vk_left))){
 		_choice=!_choice;
 		audio_play_sound(snd_menu_switch,0,false);
 	}
-	if(Input_IsPressed(INPUT.CONFIRM)){
+	if(keyboard_check_pressed(ord("Z"))){
 		if(is_string(_choice_macro)){
 			ds_map_delete(_map_macro,_choice_macro);
 			ds_map_add(_map_macro,_choice_macro,_choice);
