@@ -23,6 +23,7 @@ function MakeBoneV() {
 	a.mode = mode
 	a.out = out
 	a.destroy = ds
+	return a
 
 
 }

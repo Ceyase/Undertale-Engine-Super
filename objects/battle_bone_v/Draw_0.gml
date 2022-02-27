@@ -9,14 +9,15 @@ else{
 
 var color;
 if(mode = 0){
-	color = c_white;
+	color = make_color_rgb(255,255,255);
 }
 if(mode = 1){
-	color = c_blue;
+	color = make_color_rgb(20,196,255);
 }
 if(mode = 2){
-	color = c_orange;
+	color = make_color_rgb(248,148,29);
 }
+
 
 if(out = 0){
 	surface_set_target(Battle_GetBoardSurface()){

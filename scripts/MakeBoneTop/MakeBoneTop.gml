@@ -12,7 +12,7 @@ function MakeBoneTop() {
 	var mode = argument[4];
 	var ds = argument[5];
 
-	MakeBoneV(xx,battle_board.y-battle_board.up-3,size,dir,spd,mode,0,ds)
-
+	var a = MakeBoneV(xx,battle_board.y-battle_board.up-3,size,dir,spd,mode,0,ds)
+	return a
 
 }

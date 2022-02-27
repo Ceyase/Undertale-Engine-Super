@@ -23,6 +23,7 @@ function MakeBlaster() {
 	bb.pause = pp
 	bb.image_xscale = xscale
 	bb.image_yscale = yscale
+	return bb
 
 
 }

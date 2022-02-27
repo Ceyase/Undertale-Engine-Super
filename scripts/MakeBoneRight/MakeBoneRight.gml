@@ -12,7 +12,7 @@ function MakeBoneRight() {
 	var mode = argument[4];
 	var ds = argument[5];
 
-	MakeBoneH(battle_board.x+battle_board.right-size-7,yy,size,dir,spd,mode,0,ds)
-
+	var a = MakeBoneH(battle_board.x+battle_board.right-size-7,yy,size,dir,spd,mode,0,ds)
+	return a
 
 }
