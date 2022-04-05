@@ -1380,9 +1380,9 @@
     {"CopyToMask":-1,"filePath":"datafiles/locale","resourceVersion":"1.0","name":"list.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.1.1.610",
+    "IDEVersion": "2022.2.1.618",
   },
-  "resourceVersion": "1.4",
+  "resourceVersion": "1.5",
   "name": "Undertale Engine Super",
   "tags": [],
   "resourceType": "GMProject",

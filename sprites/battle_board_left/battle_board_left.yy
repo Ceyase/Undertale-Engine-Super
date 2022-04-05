@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"battle_board_left","path":"sprites/battle_board_left/battle_board_left.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "battle_board_left",
     "tags": [],
     "resourceType": "GMSequence",
