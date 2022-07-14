@@ -1,9 +1,9 @@
 # UNDERTALE Engine Super
 ## 关于
-![](https://img.shields.io/github/release-pre/Ceyase/UndertaleEngineSuper.svg?style=flat-square ":no-zoom")
-![](https://img.shields.io/github/stars/Ceyase/UndertaleEngineSuper?style=flat-square ":no-zoom")
-![](https://img.shields.io/github/license/Ceyase/UndertaleEngineSuper.svg?style=flat-square ":no-zoom")
-![](https://img.shields.io/github/languages/top/Ceyase/UndertaleEngineSuper.svg?style=flat-square ":no-zoom")
+![](https://img.shields.io/github/release-pre/Ceyase/Undertale-Engine-Super.svg?style=flat-square ":no-zoom")
+![](https://img.shields.io/github/stars/Ceyase/Undertale-Engine-Super?style=flat-square ":no-zoom")
+![](https://img.shields.io/github/license/Ceyase/Undertale-Engine-Super.svg?style=flat-square ":no-zoom")
+![](https://img.shields.io/github/languages/top/Ceyase/Undertale-Engine-Super.svg?style=flat-square ":no-zoom")
 
 ## _UNDERTALE Engine_ 是什么？
 
