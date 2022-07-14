@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -31,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Soul",
-    "path": "folders/物体/Battle/Soul.yy",
+    "path": "folders/Objects/Battle/Soul.yy",
   },
   "resourceVersion": "1.0",
   "name": "battle_soul_red",

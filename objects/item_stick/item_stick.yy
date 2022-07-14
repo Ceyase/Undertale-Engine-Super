@@ -2,6 +2,7 @@
   "spriteId": null,
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -29,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Item",
-    "path": "folders/物体/Item.yy",
+    "path": "folders/Objects/Item.yy",
   },
   "resourceVersion": "1.0",
   "name": "item_stick",

@@ -3,10 +3,7 @@ function Console_Step() {
 		repeat(Console_GetInputNumber()){
 			var input=Console_GetInput();
 			Console_OutputLine("] "+input);
-			var parse=Console_ParseCmd();
-			if(parse){
-				Console_ProcessCmd();
-			}
+			Console_ExecuteCmd(input);
 			Console_PopInput();
 		}
 		return true;

@@ -5,8 +5,8 @@ if(_input_acceptable){
 			_input_acceptable=false;
 	}
 	
-	if(keyboard_check_pressed(ord("Z"))&&_input_acceptable){
-		Anim_Stop(id,"_aim_x");
+	if(Input_IsPressed(INPUT.CONFIRM)&&_input_acceptable){
+		Anim_Destroy(id,"_aim_x");
 		alarm[0]=1;
 		
 		var ATK=Player_GetAtkTotal();

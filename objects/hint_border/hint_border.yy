@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -28,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Hint",
-    "path": "folders/物体/Hint.yy",
+    "path": "folders/Objects/Hint.yy",
   },
   "resourceVersion": "1.0",
   "name": "hint_border",

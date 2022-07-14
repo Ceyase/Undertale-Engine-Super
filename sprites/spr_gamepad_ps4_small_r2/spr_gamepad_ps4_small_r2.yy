@@ -24,7 +24,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9ebbb36b-dcb1-4ba3-b7ad-619891c6167d","path":"sprites/spr_gamepad_ps4_small_r2/spr_gamepad_ps4_small_r2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+    {"compositeImage":{"FrameId":{"name":"9ebbb36b-dcb1-4ba3-b7ad-619891c6167d","path":"sprites/spr_gamepad_ps4_small_r2/spr_gamepad_ps4_small_r2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"9ebbb36b-dcb1-4ba3-b7ad-619891c6167d","path":"sprites/spr_gamepad_ps4_small_r2/spr_gamepad_ps4_small_r2.yy",},"LayerId":{"name":"08dc2f23-4eae-437d-b8bc-7a1946f09f6c","path":"sprites/spr_gamepad_ps4_small_r2/spr_gamepad_ps4_small_r2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_gamepad_ps4_small_r2","path":"sprites/spr_gamepad_ps4_small_r2/spr_gamepad_ps4_small_r2.yy",},"resourceVersion":"1.0","name":"9ebbb36b-dcb1-4ba3-b7ad-619891c6167d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
@@ -37,12 +37,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"011f70b7-d25b-41b2-8cd3-b790a4591eeb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9ebbb36b-dcb1-4ba3-b7ad-619891c6167d","path":"sprites/spr_gamepad_ps4_small_r2/spr_gamepad_ps4_small_r2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+            {"id":"47ced065-4187-4181-a232-a41cd1ed7555","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9ebbb36b-dcb1-4ba3-b7ad-619891c6167d","path":"sprites/spr_gamepad_ps4_small_r2/spr_gamepad_ps4_small_r2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Small",
-    "path": "folders/精灵/Gamepad/PS4/Small.yy",
+    "path": "folders/Sprites/Gamepad/PS4/Small.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_gamepad_ps4_small_r2",

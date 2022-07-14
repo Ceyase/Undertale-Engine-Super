@@ -12,10 +12,10 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_break_0",
-  "duration": 0.145,
+  "duration": 0.0,
   "parent": {
     "name": "SFX",
-    "path": "folders/声音/SFX.yy",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_break_0",

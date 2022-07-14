@@ -2,6 +2,7 @@
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -35,7 +36,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Text",
-    "path": "folders/物体/Text.yy",
+    "path": "folders/Objects/Text.yy",
   },
   "resourceVersion": "1.0",
   "name": "text_typer",

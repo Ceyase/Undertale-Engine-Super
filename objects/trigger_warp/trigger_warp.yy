@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -37,7 +38,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Trigger",
-    "path": "folders/物体/Trigger.yy",
+    "path": "folders/Objects/Trigger.yy",
   },
   "resourceVersion": "1.0",
   "name": "trigger_warp",

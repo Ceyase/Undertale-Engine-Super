@@ -12,10 +12,10 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_menu_switch",
-  "duration": 0.028401,
+  "duration": 0.0,
   "parent": {
     "name": "SFX",
-    "path": "folders/声音/SFX.yy",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_menu_switch",

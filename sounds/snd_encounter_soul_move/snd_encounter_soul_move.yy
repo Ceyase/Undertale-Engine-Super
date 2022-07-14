@@ -12,10 +12,10 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_encounter_soul_move",
-  "duration": 0.338787,
+  "duration": 0.0,
   "parent": {
     "name": "SFX",
-    "path": "folders/声音/SFX.yy",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_encounter_soul_move",

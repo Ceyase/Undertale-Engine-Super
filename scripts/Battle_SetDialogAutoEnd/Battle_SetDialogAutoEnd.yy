@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Dialog",
-    "path": "folders/脚本/Battle/Dialog.yy",
+    "path": "folders/Scripts/Battle/Dialog.yy",
   },
   "resourceVersion": "1.0",
   "name": "Battle_SetDialogAutoEnd",

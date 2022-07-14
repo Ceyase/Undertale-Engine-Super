@@ -3,26 +3,11 @@ function Player_Heal() {
 	var HEAL=argument[0];
 
 	if(HEAL>=0){
-		if(Player_GetHp()+HEAL>=Player_GetHpMax()){
-			Player_SetKR(0);
-			Player_SetHp(Player_GetHpMax());
-		}
-		else{
-			if(Player_GetHp()+HEAL>=Player_GetHp()+Player_GetKR()){
-				Player_SetHp(Player_GetHp()+HEAL);
-				Player_SetKR(0);
-			}
-			else{
-				Player_SetHp(Player_GetHp()+HEAL);
-				Player_SetKR(Player_GetKR()-HEAL);
-			}
-		}
+		var HP=Flag_Get(FLAG_TYPE.STATIC,FLAG_STATIC.HP);
+		var HP_MAX=Flag_Get(FLAG_TYPE.STATIC,FLAG_STATIC.HP_MAX);
+		Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.HP,(HP+HEAL<=HP_MAX ? HP+HEAL : HP_MAX));
 		return true;
 	}else{
-		if(Player_GetHp()+Player_GetKR()>=Player_GetHpMax()){
-			Player_SetKR(0);
-			Player_SetHp(Player_GetHpMax());
-		}
 		return Player_Hurt(-HEAL);
 	}
 

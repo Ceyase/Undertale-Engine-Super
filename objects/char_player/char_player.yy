@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_char_frisk_mask",
     "path": "sprites/spr_char_frisk_mask/spr_char_frisk_mask.yy",
@@ -37,7 +38,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Character",
-    "path": "folders/物体/Character.yy",
+    "path": "folders/Objects/Character.yy",
   },
   "resourceVersion": "1.0",
   "name": "char_player",

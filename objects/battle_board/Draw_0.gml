@@ -1,10 +1,27 @@
-draw_sprite_ext(spr_pixel, 0, _bg_x, _bg_y, _bg_width, _bg_height, _angle, color_bg, alpha_bg)
+surface_set_target(_surface3)
+draw_surface(application_surface,0,0)
+surface_reset_target()
+surface_set_target(_surface3)
+gpu_set_alphatestenable(0)
+gpu_set_blendmode(bm_normal)
+gpu_set_blendenable(false)
+gpu_set_colorwriteenable(0, 0, 0, 1)
+draw_set_alpha(1)
+draw_surface(_surface1, 0, 0)
+draw_set_alpha(1)
+gpu_set_blendenable(true)
+gpu_set_colorwriteenable(1, 1, 1, 1)
+surface_reset_target()
 
+for(var i = 0; i < global.borderCount; i++){
+	global.borders[i].replaceSurfaceAlpha(_surface, 0, 0, i == 0);
+}
 
-
-draw_surface_general(_surface, _surface_x, _surface_y, _surface_width, _surface_height, _surface_x, _surface_y, 1, 1, 0, color, color, color, color, alpha)
-
-draw_sprite_ext(spr_pixel, 0, _frame_up_x, _frame_up_y, _frame_up_width, _frame_up_height, _angle, color_frame, alpha_frame)
-draw_sprite_ext(spr_pixel, 0, _frame_left_x, _frame_left_y, _frame_left_width, _frame_left_height, _angle, color_frame, alpha_frame)
-draw_sprite_ext(spr_pixel, 0, _frame_down_x, _frame_down_y, _frame_down_width, _frame_down_height, _angle, color_frame, alpha_frame)
-draw_sprite_ext(spr_pixel, 0, _frame_right_x, _frame_right_y, _frame_right_width, _frame_right_height, _angle, color_frame, alpha_frame)
+for(var i = 0; i < global.borderCount; i++){	//遍历所有框，应用遮罩效果
+	global.borders[i].replaceSurfaceAlpha(_surface, 0, 0, i == 0);
+	with(global.borders[i]){
+		drawBorder();
+	}
+}
+draw_surface(_surface,0,0);
+draw_surface(_surface3,0,0);

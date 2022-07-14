@@ -2,6 +2,7 @@
   "spriteId": null,
   "solid": false,
   "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -27,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Battle",
-    "path": "folders/物体/Battle.yy",
+    "path": "folders/Objects/Battle.yy",
   },
   "resourceVersion": "1.0",
   "name": "battle",

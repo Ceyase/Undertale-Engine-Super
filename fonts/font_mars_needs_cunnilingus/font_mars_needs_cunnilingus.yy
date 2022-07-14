@@ -21,6 +21,7 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 1,
+  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":9,"h":25,"character":32,"shift":9,"offset":0,},
     "33": {"x":171,"y":83,"w":12,"h":25,"character":33,"shift":15,"offset":0,},
@@ -126,8 +127,8 @@
   "canGenerateBitmap": true,
   "maintainGms1Font": false,
   "parent": {
-    "name": "字体",
-    "path": "folders/字体.yy",
+    "name": "Fonts",
+    "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
   "name": "font_mars_needs_cunnilingus",

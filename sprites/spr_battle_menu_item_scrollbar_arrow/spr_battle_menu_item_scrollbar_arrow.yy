@@ -24,7 +24,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"40629b73-b3b4-482c-bec8-0fb3bc1fde48","path":"sprites/spr_battle_menu_item_scrollbar_arrow/spr_battle_menu_item_scrollbar_arrow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+    {"compositeImage":{"FrameId":{"name":"40629b73-b3b4-482c-bec8-0fb3bc1fde48","path":"sprites/spr_battle_menu_item_scrollbar_arrow/spr_battle_menu_item_scrollbar_arrow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"imported","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"40629b73-b3b4-482c-bec8-0fb3bc1fde48","path":"sprites/spr_battle_menu_item_scrollbar_arrow/spr_battle_menu_item_scrollbar_arrow.yy",},"LayerId":{"name":"93d4ec49-b01e-4254-b5c6-15eb607e160b","path":"sprites/spr_battle_menu_item_scrollbar_arrow/spr_battle_menu_item_scrollbar_arrow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_battle_menu_item_scrollbar_arrow","path":"sprites/spr_battle_menu_item_scrollbar_arrow/spr_battle_menu_item_scrollbar_arrow.yy",},"resourceVersion":"1.0","name":"40629b73-b3b4-482c-bec8-0fb3bc1fde48","tags":[],"resourceType":"GMSpriteFrame",},
   ],
@@ -37,12 +37,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5359b858-7983-4ddb-a464-a28833598991","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"40629b73-b3b4-482c-bec8-0fb3bc1fde48","path":"sprites/spr_battle_menu_item_scrollbar_arrow/spr_battle_menu_item_scrollbar_arrow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+            {"id":"c7f05be3-7ecf-4a26-a38f-4b9aaf0f30f4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"40629b73-b3b4-482c-bec8-0fb3bc1fde48","path":"sprites/spr_battle_menu_item_scrollbar_arrow/spr_battle_menu_item_scrollbar_arrow.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Item",
-    "path": "folders/精灵/Battle/Menu/Item.yy",
+    "path": "folders/Sprites/Battle/Menu/Item.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_battle_menu_item_scrollbar_arrow",

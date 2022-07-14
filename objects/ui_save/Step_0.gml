@@ -4,28 +4,28 @@ if(_state==-1){
 		event_user(0);
 	}
 }else if(_state==0){
-	if(keyboard_check_pressed(vk_left)){
+	if(Input_IsPressed(INPUT.LEFT)){
 		if(_choice==1){
 			_choice=0;
 			audio_play_sound(snd_menu_switch,0,false);
 		}
-	}else if(keyboard_check_pressed(vk_right)){
+	}else if(Input_IsPressed(INPUT.RIGHT)){
 		if(_choice==0){
 			_choice=1;
 			audio_play_sound(snd_menu_switch,0,false);
 		}
-	}else if(keyboard_check_pressed(ord("Z"))){
+	}else if(Input_IsPressed(INPUT.CONFIRM)){
 		if(_choice==0){
 			_state=1;
 			event_user(0);
 		}else{
 			instance_destroy();
 		}
-	}else if(keyboard_check_pressed(ord("X"))){
+	}else if(Input_IsPressed(INPUT.CANCEL)){
 		instance_destroy();
 	}
 }else if(_state==1){
-	if(keyboard_check_pressed(ord("Z"))||keyboard_check_pressed(ord("X"))){
+	if(Input_IsPressed(INPUT.CONFIRM)||Input_IsPressed(INPUT.CANCEL)){
 		instance_destroy();
 	}
 }

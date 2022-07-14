@@ -1,8 +1,9 @@
 ///@arg input
-function Input_CheckReleased() {
+function Input_IsReleased() {
 	var INPUT=argument[0];
 
-	return keyboard_check_released(INPUT);
+	var state=Input_GetState(INPUT);
+	return (state==INPUT_STATE.RELEASED);
 
 
 }

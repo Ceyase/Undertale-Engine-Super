@@ -4,7 +4,8 @@ function Macro_Flag() {
 		DYNAMIC,
 		TEMP,
 		INFO,
-		SETTINGS
+		SETTINGS,
+		DEMO
 	};
 
 #region static
@@ -13,7 +14,6 @@ function Macro_Flag() {
 		LV,
 		HP_MAX,
 		HP,
-		KR,
 		ATK,
 		ATK_ITEM,
 		DEF,
@@ -76,6 +76,12 @@ function Macro_Flag() {
 		GAMEPAD_CONFIRM,
 		GAMEPAD_CANCEL,
 		GAMEPAD_MENU
+	};
+#endregion
+
+#region demo
+	enum FLAG_DEMO{
+		DATA
 	};
 #endregion
 

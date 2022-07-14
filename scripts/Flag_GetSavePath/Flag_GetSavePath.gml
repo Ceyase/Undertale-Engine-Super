@@ -2,7 +2,7 @@
 function Flag_GetSavePath() {
 	var TYPE=argument[0];
 
-	var result="./"+GAME_SAVE_NAME+"/"+GAME_GUID+"/";
+	var result="./"+GAME_SAVE_NAME+"./flag/";
 	switch(TYPE){
 		case FLAG_TYPE.STATIC:
 			result+=string(Flag_GetSaveSlot())+"/static";
@@ -16,6 +16,9 @@ function Flag_GetSavePath() {
 			break;
 		case FLAG_TYPE.SETTINGS:
 			result+="settings";
+			break;
+		case FLAG_TYPE.DEMO:
+			result+="demo/"+string(Flag_GetSaveSlot());
 			break;
 		
 		default:

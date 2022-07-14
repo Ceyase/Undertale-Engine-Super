@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -31,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Fight",
-    "path": "folders/物体/Battle/Menu/Fight.yy",
+    "path": "folders/Objects/Battle/Menu/Fight.yy",
   },
   "resourceVersion": "1.0",
   "name": "battle_menu_fight",

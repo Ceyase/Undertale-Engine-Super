@@ -1,6 +1,0 @@
-if(_XZ = "VK_SANS")Encounter_Start(0)
-if(_XZ = "?")room_goto(room_menu_music)
-if(_XZ = "HS_SANS")Encounter_Start(2)
-if(_XZ = 4)Encounter_Start(1)
-if(_XZ = 5)Encounter_Start(0)
-audio_stop_all()

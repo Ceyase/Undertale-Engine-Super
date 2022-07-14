@@ -1,9 +1,3 @@
 depth=DEPTH_BATTLE.UI;
 x=30;
 y=401;
-mode = 0
-a = 70000
-DEBUG = 0
-ca = 0
-ca1 = 0
-color = c_white

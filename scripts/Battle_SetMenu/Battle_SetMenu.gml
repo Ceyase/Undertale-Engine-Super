@@ -107,12 +107,12 @@ function Battle_SetMenu() {
 				}
 				proc+=1;
 			}
-			text+="* 饶恕"//Lang_GetString("battle.menu.mercy.spare");
+			text+=Lang_GetString("battle.menu.mercy.spare");
 		
 			//逃跑是否可用
 			if(Battle_IsMenuMercyFleeEnabled()){
 				text+="&{color `white`}";
-				text+="* 逃跑"//Lang_GetString("battle.menu.mercy.flee");
+				text+=Lang_GetString("battle.menu.mercy.flee");
 			}
 		}else{
 			if(Battle_GetMenuChoiceMercy()>=Battle_GetMenuChoiceMercyOverrideNumber()){

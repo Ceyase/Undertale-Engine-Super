@@ -8,7 +8,7 @@ function Battle_SetBoardSize() {
 	var D=argument[1];
 	var L=argument[2];
 	var R=argument[3];
-	var TIME=25;
+	var TIME=25/60;
 	if(argument_count>=5){
 		TIME=argument[4];
 	}

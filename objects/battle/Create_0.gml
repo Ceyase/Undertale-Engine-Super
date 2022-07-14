@@ -1,4 +1,3 @@
-global.DEBUFF = 0
 var ENCOUNTER=Flag_Get(FLAG_TYPE.TEMP,FLAG_TEMP.ENCOUNTER);
 _enemy_object[0]=Encounter_GetEnemy(ENCOUNTER,0);
 _enemy_object[1]=Encounter_GetEnemy(ENCOUNTER,1);
