@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Board",
-    "path": "folders/Scripts/Battle/Board.yy",
+    "name": "Flag",
+    "path": "folders/Scripts/Flag.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Battle_SetBoardSize",
+  "name": "ini_Save",
   "tags": [],
   "resourceType": "GMScript",
 }
