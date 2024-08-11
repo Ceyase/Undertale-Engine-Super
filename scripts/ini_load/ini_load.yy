@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ini_Load",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ini_Load",
+  "parent":{
+    "name":"Flag",
+    "path":"folders/Scripts/Flag.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
