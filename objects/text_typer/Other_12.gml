@@ -13,7 +13,18 @@ switch(cmd[|0]){
 	case "color":
 		if(is_string(cmd[|1])){
 			var color=GetColorFromString(cmd[|1]);
+			}else if(is_real(cmd[|1])){var color=cmd[|1]}
 			switch(color){
+				default:
+					_color_text[0]=color;
+					_color_text[1]=color;
+					_color_text[2]=color;
+					_color_text[3]=color;
+					_color_shadow[0]=make_color_rgb(49,49,79);
+					_color_shadow[1]=make_color_rgb(49,49,79);
+					_color_shadow[2]=make_color_rgb(15,15,115);
+					_color_shadow[3]=make_color_rgb(15,15,115);
+					break
 				case c_white:
 					_color_text[0]=c_white;
 					_color_text[1]=c_white;
@@ -46,7 +57,6 @@ switch(cmd[|0]){
 					_color_shadow[2]=make_color_rgb(76,0,0);
 					_color_shadow[3]=make_color_rgb(76,0,0);
 					break;
-			}
 		}
 		break;
 		
@@ -560,4 +570,227 @@ switch(cmd[|0]){
 			_skip_space=cmd[|1];
 		}
 		break;
+//==================================================
+	case "soul":
+		if(is_string(cmd[|1])){
+			Battle_SetSoul(asset_get_index(cmd[|1]))
+		}
+		break;
+	case "kr":
+		if(is_bool(cmd[|1])){
+			battle.kr=cmd[|1]
+		}
+		break;
+	case "board_size":
+		if(is_real(cmd[|1])&&is_real(cmd[|2])&&is_real(cmd[|3])&&is_real(cmd[|4])){
+			if(is_real(cmd[|5])){
+			Battle_SetBoardSize(cmd[|1],cmd[|2],cmd[|3],cmd[|4],cmd[|5])
+			}else{
+			Battle_SetBoardSize(cmd[|1],cmd[|2],cmd[|3],cmd[|4])}
+			}
+		break
+//==================================================
+	case "heal_hp":
+		if(is_real(cmd[|1])){
+			Player_Heal(cmd[|1])
+		}
+		break;
+	case "hurt_hp":
+		if(is_real(cmd[|1])){
+			Player_Hurt(cmd[|1])
+		}
+		break;
+	case "set_hp":
+		if(is_real(cmd[|1])){
+			Player_SetHp(cmd[|1])
+		}
+		break;
+	case "set_hpmax":
+		if(is_real(cmd[|1])){
+			Player_SetHpMax(cmd[|1])
+		}
+		break;
+	case "set_lv":
+		if(is_real(cmd[|1])){
+			Player_SetLv(cmd[|1])
+		}
+		break;
+	case "clear_kr":
+		Player_SetKR(0)
+		break;
+//==================================================
+	case "end_turn":
+		Battle_EndTurn()
+		break;
+	case "black_cut":
+		audio_play_sound(snd_cut,0,0)
+		fader.color=c_black
+		fader.alpha=1
+		if(is_real(cmd[|1])){
+		fader.alarm[0]=cmd[|1]}
+		break;
+	case "audio_play":
+		if(is_string(cmd[|1])){
+		if(is_real(cmd[|2])){
+		if(is_bool(cmd[|3])){
+		audio_play_sound(asset_get_index(cmd[|1]),cmd[|2],cmd[|3])
+		}else{
+		audio_play_sound(asset_get_index(cmd[|1]),cmd[|2],0)}
+		}else{
+		audio_play_sound(asset_get_index(cmd[|1]),0,0)
+		}}
+		break;
+	case "audio_pause":
+		if(is_string(cmd[|1])){
+		audio_pause_sound(asset_get_index(cmd[|1]))}
+		break;
+	case "audio_resume":
+		if(is_string(cmd[|1])){
+		audio_resume_sound(asset_get_index(cmd[|1]))}
+		break;
+	case "audio_stop":
+		if(is_string(cmd[|1])){
+		audio_stop_sound(asset_get_index(cmd[|1]))}
+		break;
+	case "alarm":
+		if(is_string(cmd[|1])&&object_exists(asset_get_index(cmd[|1]))&&is_real(cmd[|2])&&is_real(cmd[|3])){
+		var _alarm=cmd[|2]
+		with(asset_get_index(cmd[|1])){
+		alarm[_alarm]=cmd[|3]}}
+		break;
+	case "variable":
+		var target=cmd[|1]
+		var variable=cmd[|2]
+		var value=cmd[|3]
+		if(is_string(target)&&object_exists(asset_get_index(target))&&is_string(variable)){
+			variable_instance_set(asset_get_index(target),variable,value)
+		}
+		break
+//ui_dialog名字=================================================================================================
+	case "show_name":
+		if(is_bool(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._show_name=cmd[|1]
+		}
+		break
+	case "name":
+		if(is_string(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._name=cmd[|1]
+		}
+		break
+//ui_dialog设置=================================================================================================
+	case "ui_font":
+		if(is_string(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._font=asset_get_index(cmd[|1])
+		}
+		break
+	case "ui_font_scale":
+		if(is_bool(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog.scale=cmd[|1]
+		}
+		break
+//ui_dialog位置=================================================================================================
+	case "top":
+		if(is_bool(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._top=cmd[|1]
+		}
+		break
+//ui_dialog选择=================================================================================================
+	case "ui_choice":
+		if(is_real(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._choice=cmd[|1]
+		}
+		break
+	case "ui_choice1":
+		if(is_string(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._choice1=cmd[|1]
+		}
+		break
+	case "ui_choice2":
+		if(is_string(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._choice2=cmd[|1]
+		}
+		break
+	case "ui_choice3":
+		if(is_string(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._choice3=cmd[|1]
+		}
+		break
+	case "ui_choice4":
+		if(is_string(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._choice4=cmd[|1]
+		}
+		break
+	case "ui_choice5":
+		if(is_string(cmd[|1])&&instance_exists(ui_dialog)){
+			ui_dialog._choice5=cmd[|1]
+		}
+		break
+//==================================================
+	case "encounter":
+		if(is_real(cmd[|1])){
+		if(is_bool(cmd[|2])){
+		if(is_bool(cmd[|3])){
+			Encounter_Start(cmd[|1],cmd[|2],cmd[|3])
+			}else{
+			Encounter_Start(cmd[|1],cmd[|2],0)}
+			}else{
+			Encounter_Start(cmd[|1],0,0)
+			}}
+		break
+	/*case "encounter_exclam":
+		if(is_real(cmd[|1])){
+			Encounter_Start(cmd[|1],0,1)
+		}
+	case "encounter_anim":
+		if(is_real(cmd[|1])){
+			Encounter_Start(cmd[|1],1,0)
+		}
+	case "encounter_anim_exclam":
+		if(is_real(cmd[|1])){
+			Encounter_Start(cmd[|1],1,1)
+		}
+		break*/
+	case "shop":
+		if(is_real(cmd[|1])){
+			Shop_Start(cmd[|1])
+		}
+		break
+//==================================================
+	case "choice_retry":
+		fader.color=c_black
+		Anim_Create(fader,"alpha",0,0,0,1,100)
+		audio_sound_gain(bgm_gameover,0,1000)
+        choice = Player_GetTextTyperChoice()
+        if(choice == 0){
+			gameover.alarm[10]=140
+			gameover.alarm[7]=30
+		}else if(choice=1){
+			gameover.alarm[11]=140
+			gameover.alarm[9]=40
+		}
+        break
+	case "choice_box":
+        choice=Player_GetTextTyperChoice()
+		if(choice=0){
+		instance_create_depth(0,0,0,ui_box)}
+	break
+	case "choice_save":
+        choice=Player_GetTextTyperChoice()
+		if(choice=0){
+		//Player_Heal(9999999999);
+		//audio_play_sound(snd_item_heal,0,false);
+		//audio_sound_gain(snd_item_heal,0.8,0)
+		instance_create_depth(0,0,0,ui_save)}
+	break
+	case "ui_save":
+		instance_create_depth(0,0,0,ui_save)
+	break
+	case "choice_back_lobby":
+        choice=Player_GetTextTyperChoice()
+		if(choice=0){
+		fader.color=c_black
+		Fader_Fade(0,1,29)
+		char_player.alarm[1]=30
+		}
+	break
 }

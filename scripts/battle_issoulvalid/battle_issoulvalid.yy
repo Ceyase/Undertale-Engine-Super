@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Battle_IsSoulValid",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Battle_IsSoulValid",
-  "parent":{
-    "name":"Soul",
-    "path":"folders/Scripts/Battle/Soul.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Battle_IsSoulValid",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Soul",
+    "path": "folders/Scripts/Battle/Soul.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Battle_GetMenuChoiceMercy",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Battle_GetMenuChoiceMercy",
-  "parent":{
-    "name":"Choice",
-    "path":"folders/Scripts/Battle/Menu/Choice.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Battle_GetMenuChoiceMercy",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Choice",
+    "path": "folders/Scripts/Battle/Menu/Choice.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

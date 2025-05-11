@@ -45,7 +45,7 @@ if(shake_y>0){
 }else{
 	shake_speed_y=0;
 	shake_decrease_y=1;
-	shake_random_y=false;
+	shake_random_y=false;	
 	_shake_time_y=0;
 	_shake_pos_y=0;
 	_shake_positive_y=true;

@@ -6,7 +6,7 @@ function Anim_Step() {
 		if(instance_exists(map[?ANIM_DATA.TARGET]) || map[?ANIM_DATA.TARGET]==global){
 			if(map[?ANIM_DATA.DELAY]<=0){
 				if(map[?ANIM_DATA.TIME] < map[?ANIM_DATA.DURATION]){
-					map[?ANIM_DATA.TIME]+=delta_time / 1000000;
+					map[?ANIM_DATA.TIME]+=1;
 					var value=map[?ANIM_DATA.START]+map[?ANIM_DATA.CHANGE]*Anim_GetValue(map[?ANIM_DATA.TWEEN],map[?ANIM_DATA.EASE],map[?ANIM_DATA.TIME]/map[?ANIM_DATA.DURATION],map[?ANIM_DATA.ARG_0],map[?ANIM_DATA.ARG_1]);
 					if(map[?ANIM_DATA.TARGET]!=global){
 						variable_instance_set(map[?ANIM_DATA.TARGET],map[?ANIM_DATA.VAR_NAME],value);
@@ -26,7 +26,7 @@ function Anim_Step() {
 					proc-=1;
 				}
 			}else{
-				map[?ANIM_DATA.DELAY]-=delta_time / 1000000;
+				map[?ANIM_DATA.DELAY]-=1;
 			}
 		}else{
 			ds_map_destroy(map);

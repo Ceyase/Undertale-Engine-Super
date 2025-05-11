@@ -4,7 +4,8 @@ function BGM_Stop() {
 
 	if(BGM_IsSlotValid(SLOT)){
 		if(BGM_IsPlaying(SLOT)){
-			audio_stop_sound(BGM_GetID(SLOT));
+			//audio_stop_sound(BGM_GetID(SLOT));
+			audio_stop_all();
 			return true;
 		}else{
 			return false;

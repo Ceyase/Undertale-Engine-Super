@@ -18,14 +18,15 @@ function Battle_SetMenuChoiceItem() {
 	
 		//更新文字
 		var text="";
-		var proc=battle._menu_choice_item_first;
-		repeat(3){
+		var proc=battle._menu_choice_item;
 			if(Item_IsValid(Item_Get(proc))){
-				text+="* "+Item_GetName(Item_Get(proc))+"&";
-				proc+=1;
+				text+="{color `gray`}"+Item_GetName(Item_Get(proc-2))+"&";
+				text+="{color `gray`}"+Item_GetName(Item_Get(proc-1))+"&";
+				text+="{color `white`}"+Item_GetName(Item_Get(proc))+"&";
+				text+="{color `gray`}"+Item_GetName(Item_Get(proc+1))+"&";
+				text+="{color `gray`}"+Item_GetName(Item_Get(proc+2))+"&";
 			}
-		}
-		Battle_SetDialog(text,true);
+		Battle_SetDialog5Line(text,true);
 				
 		if(CALL){
 			Battle_CallEnemyEvent(BATTLE_ENEMY_EVENT.MENU_CHOICE_SWITCH);

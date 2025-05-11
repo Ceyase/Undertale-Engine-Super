@@ -1,2 +1,2 @@
 ///@desc Soul Collision
-Battle_CallSoulEventHurt();
+event_user(15)

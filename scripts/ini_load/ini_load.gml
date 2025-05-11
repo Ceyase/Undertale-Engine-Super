@@ -1,8 +1,6 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ini_Load(){
-	ini_open(GAME_SAVE_NAME+"/file"+string(Flag_GetSaveSlot())+".ini")
-	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.ROOM,asset_get_index(ini_read_string("static","room",room_get_name(Flag_Get(FLAG_TYPE.STATIC,FLAG_STATIC.ROOM,0)))))
+	ini_open(working_directory+"file"+string(Flag_GetSaveSlot())+".ini")
+	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.ROOM,ini_read_string("static","room",Flag_Get(FLAG_TYPE.STATIC,FLAG_STATIC.ROOM,room_get_name(0))))
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.NAME,ini_read_string("static","name","Player"));
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.LV,ini_read_real("static","lv",1));
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.EXP,ini_read_real("static","exp",1));
@@ -24,6 +22,7 @@ function ini_Load(){
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.INV,ini_read_real("static","inv",10));
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.BATTLE_MENU_FIGHT_OBJ,asset_get_index(ini_read_string("static","battle_menu_fight_obj","noone")));
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.GOLD,ini_read_real("static","gold",0));
+	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.SHOP_HOST,asset_get_index(ini_read_string("static","shop_host","noone")));
 	
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.PHONE,asset_get_index(ini_read_string("phone","0","noone")));
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.PHONE+1,asset_get_index(ini_read_string("phone","1","noone")));
@@ -54,5 +53,8 @@ function ini_Load(){
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.BOX+17,asset_get_index(ini_read_string("box","17","noone")));
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.BOX+18,asset_get_index(ini_read_string("box","18","noone")));
 	Flag_Set(FLAG_TYPE.STATIC,FLAG_STATIC.BOX+19,asset_get_index(ini_read_string("box","19","noone")));
+	
+	var a=0
+	repeat(BATTLE.NUM){global.passed[a]=ini_read_real("passed",a,false);a+=1}
 	ini_close()
 }

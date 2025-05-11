@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Battle_GetEnemy",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Battle_GetEnemy",
-  "parent":{
-    "name":"Enemy",
-    "path":"folders/Scripts/Battle/Enemy.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Battle_GetEnemy",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Enemy",
+    "path": "folders/Scripts/Battle/Enemy.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

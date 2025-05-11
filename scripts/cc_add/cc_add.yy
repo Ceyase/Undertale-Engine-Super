@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"CC_Add",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"CC_Add",
-  "parent":{
-    "name":"CC",
-    "path":"folders/Scripts/CC.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "CC_Add",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "CC",
+    "path": "folders/Scripts/CC.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

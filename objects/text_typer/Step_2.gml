@@ -78,9 +78,6 @@ if(_char_proc<string_length(text)+1){
 									}
 									_char_proc+=1;
 								}
-								if(loop){
-									Console_OutputLine("WARNING! Text typer command is not valid in \""+text+"\"!");
-								}
 							}
 							
 							while(string_char_at(text,_char_proc)=="&"&&((_sleep==0||_skipping||_instant)&&!_paused&&_char_proc<=string_length(text))){

@@ -1,6 +1,6 @@
 image_angle = dir
 image_xscale = length
-depth = ((!outside) ? -500 : -800)
+depth = ((!outside) ? DEPTH_BATTLE.BULLET : DEPTH_BATTLE.BULLET_OUTSIDE_LOW)
 if place_meeting(x, y, battle_soul)
 {
     var collision = 1
@@ -20,4 +20,4 @@ if (time != -1)
         time -= 1
 }
 
-
+if(place_meeting(x,y,battle_soul_graze)){with(battle_soul_graze){event_user(0)}}

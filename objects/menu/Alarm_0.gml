@@ -3,5 +3,6 @@ Flag_Clear(FLAG_TYPE.DYNAMIC);
 Flag_Custom();
 Player_SetName(_naming_name);
 fader.color=c_black;
-Fader_Fade(-1,0,20/60);
-room_goto_next();
+Fader_Fade(-1,0,20);
+//room_goto_next();
+room_goto(room_lobby)

@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"ini_Save",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"ini_Save",
-  "parent":{
-    "name":"Flag",
-    "path":"folders/Scripts/Flag.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "ini_Save",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "ini",
+    "path": "folders/Scripts/Flag/ini.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

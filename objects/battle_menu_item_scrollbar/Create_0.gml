@@ -4,4 +4,6 @@ y=battle_board.y;
 
 _arrow=0;
 
+a=noone
+
 alarm[0]=1;

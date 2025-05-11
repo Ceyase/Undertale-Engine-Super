@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Battle_IsBulletValid",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Battle_IsBulletValid",
-  "parent":{
-    "name":"Bullet",
-    "path":"folders/Scripts/Battle/Bullet.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Battle_IsBulletValid",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Bullet",
+    "path": "folders/Scripts/Battle/Bullet.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

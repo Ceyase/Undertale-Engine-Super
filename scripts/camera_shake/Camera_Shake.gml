@@ -6,6 +6,7 @@
 ///@arg shake_random_y*
 ///@arg shake_decrease_x*
 ///@arg shake_decrease_y*
+///@arg blur*
 function Camera_Shake() {
 
 	var X=argument[0];
@@ -33,6 +34,9 @@ function Camera_Shake() {
 	}
 	if(argument_count>=8){
 		DECREASE_Y=argument[7];
+	}
+	if(argument_count>=9&&argument[8]=true){
+		Blur_Make()
 	}
 
 	camera.shake_x=X;

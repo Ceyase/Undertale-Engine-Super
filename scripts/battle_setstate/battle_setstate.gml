@@ -6,6 +6,11 @@ function Battle_SetState() {
 
 	//菜单
 	if(STATE==BATTLE_STATE.MENU){
+		Battle_SetTurnInfo(BATTLE_TURN.TIME,0)
+		Battle_SetTurnInfo(BATTLE_TURN.BOARD_UP,65)
+		Battle_SetTurnInfo(BATTLE_TURN.BOARD_DOWN,65)
+		Battle_SetTurnInfo(BATTLE_TURN.BOARD_LEFT,283)
+		Battle_SetTurnInfo(BATTLE_TURN.BOARD_RIGHT,283)
 		Battle_SetNextState(BATTLE_STATE.DIALOG);
 	
 		Battle_SetMenuChoiceEnemy(0,false);
@@ -63,22 +68,22 @@ function Battle_SetState() {
 		var SIZE_DURATION=Battle_GetTurnInfo(BATTLE_TURN.BOARD_SIZE_DURATION,30);
 	
 		if(MOVE_MODE==BATTLE_TURN_BOARD_TRANSFORM_MODE.SPEED){
-			Anim_Create(battle_board,"x",MOVE_TWEEN,MOVE_EASE,X_OLD,X_CHANGE,round(abs(X_CHANGE/MOVE_SPEED))/60);
-			Anim_Create(battle_board,"y",MOVE_TWEEN,MOVE_EASE,Y_OLD,Y_CHANGE,round(abs(Y_CHANGE/MOVE_SPEED))/60);
+			Anim_Create(battle_board,"x",MOVE_TWEEN,MOVE_EASE,X_OLD,X_CHANGE,round(abs(X_CHANGE/MOVE_SPEED)));
+			Anim_Create(battle_board,"y",MOVE_TWEEN,MOVE_EASE,Y_OLD,Y_CHANGE,round(abs(Y_CHANGE/MOVE_SPEED)));
 		}else{
-			Anim_Create(battle_board,"x",MOVE_TWEEN,MOVE_EASE,X_OLD,X_CHANGE,MOVE_DURATION/60);
-			Anim_Create(battle_board,"y",MOVE_TWEEN,MOVE_EASE,Y_OLD,Y_CHANGE,MOVE_DURATION/60);
+			Anim_Create(battle_board,"x",MOVE_TWEEN,MOVE_EASE,X_OLD,X_CHANGE,MOVE_DURATION);
+			Anim_Create(battle_board,"y",MOVE_TWEEN,MOVE_EASE,Y_OLD,Y_CHANGE,MOVE_DURATION);
 		}
 		if(SIZE_MODE==BATTLE_TURN_BOARD_TRANSFORM_MODE.SPEED){
-			Anim_Create(battle_board,"up",SIZE_TWEEN,SIZE_EASE,UP_OLD,UP_CHANGE,round(abs(UP_CHANGE/SIZE_SPEED))/60);
-			Anim_Create(battle_board,"down",SIZE_TWEEN,SIZE_EASE,DOWN_OLD,DOWN_CHANGE,round(abs(DOWN_CHANGE/SIZE_SPEED))/60);
-			Anim_Create(battle_board,"left",SIZE_TWEEN,SIZE_EASE,LEFT_OLD,LEFT_CHANGE,round(abs(LEFT_CHANGE/SIZE_SPEED))/60);
-			Anim_Create(battle_board,"right",SIZE_TWEEN,SIZE_EASE,RIGHT_OLD,RIGHT_CHANGE,round(abs(RIGHT_CHANGE/SIZE_SPEED))/60);
+			Anim_Create(battle_board,"up",SIZE_TWEEN,SIZE_EASE,UP_OLD,UP_CHANGE,round(abs(UP_CHANGE/SIZE_SPEED)));
+			Anim_Create(battle_board,"down",SIZE_TWEEN,SIZE_EASE,DOWN_OLD,DOWN_CHANGE,round(abs(DOWN_CHANGE/SIZE_SPEED)));
+			Anim_Create(battle_board,"left",SIZE_TWEEN,SIZE_EASE,LEFT_OLD,LEFT_CHANGE,round(abs(LEFT_CHANGE/SIZE_SPEED)));
+			Anim_Create(battle_board,"right",SIZE_TWEEN,SIZE_EASE,RIGHT_OLD,RIGHT_CHANGE,round(abs(RIGHT_CHANGE/SIZE_SPEED)));
 		}else{
-			Anim_Create(battle_board,"up",SIZE_TWEEN,SIZE_EASE,UP_OLD,UP_CHANGE,SIZE_DURATION/60);
-			Anim_Create(battle_board,"down",SIZE_TWEEN,SIZE_EASE,DOWN_OLD,DOWN_CHANGE,SIZE_DURATION/60);
-			Anim_Create(battle_board,"left",SIZE_TWEEN,SIZE_EASE,LEFT_OLD,LEFT_CHANGE,SIZE_DURATION/60);
-			Anim_Create(battle_board,"right",SIZE_TWEEN,SIZE_EASE,RIGHT_OLD,RIGHT_CHANGE,SIZE_DURATION/60);
+			Anim_Create(battle_board,"up",SIZE_TWEEN,SIZE_EASE,UP_OLD,UP_CHANGE,SIZE_DURATION);
+			Anim_Create(battle_board,"down",SIZE_TWEEN,SIZE_EASE,DOWN_OLD,DOWN_CHANGE,SIZE_DURATION);
+			Anim_Create(battle_board,"left",SIZE_TWEEN,SIZE_EASE,LEFT_OLD,LEFT_CHANGE,SIZE_DURATION);
+			Anim_Create(battle_board,"right",SIZE_TWEEN,SIZE_EASE,RIGHT_OLD,RIGHT_CHANGE,SIZE_DURATION);
 		}
 	}
 
@@ -122,22 +127,22 @@ function Battle_SetState() {
 		var SIZE_DURATION=Battle_GetTurnInfo(BATTLE_TURN.BOARD_RESET_SIZE_DURATION,30);
 	
 		if(MOVE_MODE==BATTLE_TURN_BOARD_TRANSFORM_MODE.SPEED){
-			Anim_Create(battle_board,"x",MOVE_TWEEN,MOVE_EASE,X_OLD,X_CHANGE,round(abs(X_CHANGE/MOVE_SPEED))/60);
-			Anim_Create(battle_board,"y",MOVE_TWEEN,MOVE_EASE,Y_OLD,Y_CHANGE,round(abs(Y_CHANGE/MOVE_SPEED))/60);
+			Anim_Create(battle_board,"x",MOVE_TWEEN,MOVE_EASE,X_OLD,X_CHANGE,round(abs(X_CHANGE/MOVE_SPEED)));
+			Anim_Create(battle_board,"y",MOVE_TWEEN,MOVE_EASE,Y_OLD,Y_CHANGE,round(abs(Y_CHANGE/MOVE_SPEED)));
 		}else{
-			Anim_Create(battle_board,"x",MOVE_TWEEN,MOVE_EASE,X_OLD,X_CHANGE,MOVE_DURATION/60);
-			Anim_Create(battle_board,"y",MOVE_TWEEN,MOVE_EASE,Y_OLD,Y_CHANGE,MOVE_DURATION/60);
+			Anim_Create(battle_board,"x",MOVE_TWEEN,MOVE_EASE,X_OLD,X_CHANGE,MOVE_DURATION);
+			Anim_Create(battle_board,"y",MOVE_TWEEN,MOVE_EASE,Y_OLD,Y_CHANGE,MOVE_DURATION);
 		}
 		if(SIZE_MODE==BATTLE_TURN_BOARD_TRANSFORM_MODE.SPEED){
-			Anim_Create(battle_board,"up",SIZE_TWEEN,SIZE_EASE,UP_OLD,UP_CHANGE,round(abs(UP_CHANGE/SIZE_SPEED))/60);
-			Anim_Create(battle_board,"down",SIZE_TWEEN,SIZE_EASE,DOWN_OLD,DOWN_CHANGE,round(abs(DOWN_CHANGE/SIZE_SPEED))/60);
-			Anim_Create(battle_board,"left",SIZE_TWEEN,SIZE_EASE,LEFT_OLD,LEFT_CHANGE,round(abs(LEFT_CHANGE/SIZE_SPEED))/60);
-			Anim_Create(battle_board,"right",SIZE_TWEEN,SIZE_EASE,RIGHT_OLD,RIGHT_CHANGE,round(abs(RIGHT_CHANGE/SIZE_SPEED))/60);
+			Anim_Create(battle_board,"up",SIZE_TWEEN,SIZE_EASE,UP_OLD,UP_CHANGE,round(abs(UP_CHANGE/SIZE_SPEED)));
+			Anim_Create(battle_board,"down",SIZE_TWEEN,SIZE_EASE,DOWN_OLD,DOWN_CHANGE,round(abs(DOWN_CHANGE/SIZE_SPEED)));
+			Anim_Create(battle_board,"left",SIZE_TWEEN,SIZE_EASE,LEFT_OLD,LEFT_CHANGE,round(abs(LEFT_CHANGE/SIZE_SPEED)));
+			Anim_Create(battle_board,"right",SIZE_TWEEN,SIZE_EASE,RIGHT_OLD,RIGHT_CHANGE,round(abs(RIGHT_CHANGE/SIZE_SPEED)));
 		}else{
-			Anim_Create(battle_board,"up",SIZE_TWEEN,SIZE_EASE,UP_OLD,UP_CHANGE,SIZE_DURATION/60);
-			Anim_Create(battle_board,"down",SIZE_TWEEN,SIZE_EASE,DOWN_OLD,DOWN_CHANGE,SIZE_DURATION/60);
-			Anim_Create(battle_board,"left",SIZE_TWEEN,SIZE_EASE,LEFT_OLD,LEFT_CHANGE,SIZE_DURATION/60);
-			Anim_Create(battle_board,"right",SIZE_TWEEN,SIZE_EASE,RIGHT_OLD,RIGHT_CHANGE,SIZE_DURATION/60);
+			Anim_Create(battle_board,"up",SIZE_TWEEN,SIZE_EASE,UP_OLD,UP_CHANGE,SIZE_DURATION);
+			Anim_Create(battle_board,"down",SIZE_TWEEN,SIZE_EASE,DOWN_OLD,DOWN_CHANGE,SIZE_DURATION);
+			Anim_Create(battle_board,"left",SIZE_TWEEN,SIZE_EASE,LEFT_OLD,LEFT_CHANGE,SIZE_DURATION);
+			Anim_Create(battle_board,"right",SIZE_TWEEN,SIZE_EASE,RIGHT_OLD,RIGHT_CHANGE,SIZE_DURATION);
 		}
 	
 		Battle_CallEnemyEvent(BATTLE_ENEMY_EVENT.BOARD_RESETTING_START);

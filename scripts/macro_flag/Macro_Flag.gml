@@ -37,7 +37,9 @@ function Macro_Flag() {
 		ROOM,
 		TIME,
 		BOX,
-		BOX_END=FLAG_STATIC.BOX+20-1
+		BOX_END=FLAG_STATIC.BOX+20-1,
+		SHOP_HOST,
+		KR
 	};
 #endregion
 
@@ -57,7 +59,9 @@ function Macro_Flag() {
 		TRIGGER_WARP_LANDMARK,
 		TRIGGER_WARP_DIR,
 		TEXT_TYPER_CHOICE,
-		FRAME_SKIP
+		FRAME_SKIP,
+		SHOP,
+		SHOP_ROOM_RETURN
 	};
 #endregion
 
@@ -75,7 +79,12 @@ function Macro_Flag() {
 		LANGUAGE,
 		GAMEPAD_CONFIRM,
 		GAMEPAD_CANCEL,
-		GAMEPAD_MENU
+		GAMEPAD_MENU,
+		WINDOW_SIZE,
+		FULLSCREEN,
+		VOLUME,
+		BORDER,
+		MODE
 	};
 #endregion
 

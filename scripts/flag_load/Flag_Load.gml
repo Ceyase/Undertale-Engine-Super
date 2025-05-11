@@ -11,7 +11,6 @@ function Flag_Load() {
 	}
 
 	if(!file_exists(PATH)){
-		Console_OutputLine("Attempted to load flag type "+string(TYPE)+" from non-existing file \""+PATH+"\"!");
 		return false;
 	}
 
@@ -21,8 +20,6 @@ function Flag_Load() {
 	Flag_SetRaw(TYPE,str);
 
 	file_text_close(file);
-
-	Console_OutputLine("Flag loaded from \""+PATH+"\".");
 
 	return true;
 

@@ -12,7 +12,7 @@ repeat(4){
 			move_x=0.05*(proc==DIR.LEFT ? -1 : 1);
 		}
 		repeat(move_speed[proc]*20){
-			var cmove=true;
+			cmove=true;
 			if(collision){
 				var list=_collision_list;
 				ds_list_clear(list);
@@ -41,10 +41,12 @@ repeat(4){
 	proc+=90;
 }
 
-var refresh=((dir!=_dir_previous || talking!=_talking_previous || (move[dir]>0)!=(_move_previous>0)) && !res_override);
+var refresh=((dir!=_dir_previous || talking!=_talking_previous || (move[dir]>0)!=(_move_previous>0)||cmove!=cmove_previous) && !res_override);
 if(refresh){
-	if(move[DIR.UP]>0 || move[DIR.DOWN]>0 || move[DIR.LEFT]>0 || move[DIR.RIGHT]>0){
-		sprite_index=res_move_sprite[dir];
+	if((move[DIR.UP]>0 || move[DIR.DOWN]>0 || move[DIR.LEFT]>0 || move[DIR.RIGHT]>0)&&cmove){
+		if(move_speed[dir]=3){
+		sprite_index=res_move_run_sprite[dir];}else{
+		sprite_index=res_move_sprite[dir];}
 		image_index=res_move_image[dir];
 		image_speed=res_move_speed[dir];
 		image_xscale*=((res_move_flip_x[dir]&&sign(image_xscale)==1)||(!res_move_flip_x[dir]&&sign(image_xscale)==-1) ? -1 : 1);
@@ -61,6 +63,13 @@ if(refresh){
 	}
 }
 
+if(move_speed[dir]=3&&sprite_index=res_move_sprite[dir]){
+sprite_index=res_move_run_sprite[dir];
+}else if(move_speed[dir]=2&&sprite_index=res_move_run_sprite[dir]){
+sprite_index=res_move_sprite[dir];}
+
+
 _talking_previous=talking;
 _dir_previous=dir;
 _move_previous=move[dir];
+cmove_previous=cmove

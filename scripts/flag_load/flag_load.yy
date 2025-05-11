@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Flag_Load",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Flag_Load",
-  "parent":{
-    "name":"Flag",
-    "path":"folders/Scripts/Flag.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Flag_Load",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Flag",
+    "path": "folders/Scripts/Flag.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

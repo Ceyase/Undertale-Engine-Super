@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Battle_IsTurnPreparationAutoEnd",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Battle_IsTurnPreparationAutoEnd",
-  "parent":{
-    "name":"Turn",
-    "path":"folders/Scripts/Battle/Turn.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Battle_IsTurnPreparationAutoEnd",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Turn",
+    "path": "folders/Scripts/Battle/Turn.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

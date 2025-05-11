@@ -9,7 +9,7 @@ bar_width=100;
 bar_hp_max=0;
 bar_hp_original=0;
 bar_hp_target=0;
-bar_duration=0.75;
+bar_duration=45;
 _bar_hp=0;
 
 alarm[0]=1;

@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Player_GetExp",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Player_GetExp",
-  "parent":{
-    "name":"Stat",
-    "path":"folders/Scripts/Player/Stat.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Player_GetExp",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Stat",
+    "path": "folders/Scripts/Player/Stat.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

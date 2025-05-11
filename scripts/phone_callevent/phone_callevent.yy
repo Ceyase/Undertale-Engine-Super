@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Phone_CallEvent",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Phone_CallEvent",
-  "parent":{
-    "name":"Phone",
-    "path":"folders/Scripts/Phone.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Phone_CallEvent",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Phone",
+    "path": "folders/Scripts/Phone.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

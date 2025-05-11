@@ -1,3 +1,4 @@
 if(Input_IsPressed(INPUT.CONFIRM)){
-	room_goto_next();
+	Dialog_Clear()
+	room_goto(room_warning)
 }

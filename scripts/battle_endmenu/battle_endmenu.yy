@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Battle_EndMenu",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Battle_EndMenu",
-  "parent":{
-    "name":"Menu",
-    "path":"folders/Scripts/Battle/Menu.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Battle_EndMenu",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Menu",
+    "path": "folders/Scripts/Battle/Menu.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

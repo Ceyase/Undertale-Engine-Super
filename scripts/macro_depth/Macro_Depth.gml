@@ -3,7 +3,8 @@ function Macro_Depth() {
 		PANEL=-100,
 		TEXT=-200,
 		ENCOUNTER_ANIM=-300,
-		FADER=-400
+		FADER=-1500,
+		GAME=-2000
 	};
 
 	enum DEPTH_BATTLE{
@@ -17,6 +18,12 @@ function Macro_Depth() {
 		BULLET_OUTSIDE_LOW=-800,
 		SOUL=-900,
 		BULLET_OUTSIDE_HIGH=-1000
+	};
+	
+	enum DEPTH_OVERWORLD{
+		TRIGGER=-100,
+		CHAR=-200,
+		COVER_PLAYER=-700
 	};
 
 

@@ -23,7 +23,7 @@ function Encounter_Start() {
 			Flag_Set(FLAG_TYPE.TEMP,FLAG_TEMP.ENCOUNTER,ENCOUNTER);
 			if(!Player_IsInBattle()){
 				Flag_Set(FLAG_TYPE.TEMP,FLAG_TEMP.BATTLE_ROOM_RETURN,room);
-				room_persistent=true;
+				if(room!=room_games&&string_copy(room_get_name(room),1,9)!="room_logo"){room_persistent=true;}
 			}
 			room_goto(room_battle);
 		}else{
@@ -37,7 +37,6 @@ function Encounter_Start() {
 		return true;
 	}else{
 		//Console_OutputLine("Encounter_Start() failed!");
-		Console_OutputLine("Encounter ID "+string(ENCOUNTER)+" doesn't exists!");
 		return false;
 	}
 

@@ -1,3 +1,15 @@
+Battle_SetTurnTime(0)
+kr=0
+shield=false
+shield_useable=false
+shielding=false
+shieldval=120
+if(Item_GetArmor()=item_shield){
+shield=1
+shield_useable=1}
+tp=false
+tp_value=0
+
 var ENCOUNTER=Flag_Get(FLAG_TYPE.TEMP,FLAG_TEMP.ENCOUNTER);
 _enemy_object[0]=Encounter_GetEnemy(ENCOUNTER,0);
 _enemy_object[1]=Encounter_GetEnemy(ENCOUNTER,1);
@@ -24,18 +36,48 @@ _enemy_action_name[0,2]="";
 _enemy_action_name[0,3]="";
 _enemy_action_name[0,4]="";
 _enemy_action_name[0,5]="";
+_enemy_action_name[0,6]="";
+_enemy_action_name[0,7]="";
+_enemy_action_info[0,0]="";
+_enemy_action_info[0,1]="";
+_enemy_action_info[0,2]="";
+_enemy_action_info[0,3]="";
+_enemy_action_info[0,4]="";
+_enemy_action_info[0,5]="";
+_enemy_action_info[0,6]="";
+_enemy_action_info[0,7]="";
 _enemy_action_name[1,0]="";
 _enemy_action_name[1,1]="";
 _enemy_action_name[1,2]="";
 _enemy_action_name[1,3]="";
 _enemy_action_name[1,4]="";
 _enemy_action_name[1,5]="";
+_enemy_action_name[1,6]="";
+_enemy_action_name[1,7]="";
+_enemy_action_info[1,0]="";
+_enemy_action_info[1,1]="";
+_enemy_action_info[1,2]="";
+_enemy_action_info[1,3]="";
+_enemy_action_info[1,4]="";
+_enemy_action_info[1,5]="";
+_enemy_action_info[1,6]="";
+_enemy_action_info[1,7]="";
 _enemy_action_name[2,0]="";
 _enemy_action_name[2,1]="";
 _enemy_action_name[2,2]="";
 _enemy_action_name[2,3]="";
 _enemy_action_name[2,4]="";
 _enemy_action_name[2,5]="";
+_enemy_action_name[2,6]="";
+_enemy_action_name[2,7]="";
+_enemy_action_info[2,0]="";
+_enemy_action_info[2,1]="";
+_enemy_action_info[2,2]="";
+_enemy_action_info[2,3]="";
+_enemy_action_info[2,4]="";
+_enemy_action_info[2,5]="";
+_enemy_action_info[2,6]="";
+_enemy_action_info[2,7]="";
 //敌人中心位置
 _enemy_center_pos_x[0]=0;
 _enemy_center_pos_y[0]=0;
@@ -47,6 +89,8 @@ _enemy_center_pos_y[2]=0;
 _enemy_def[0]=0;
 _enemy_def[1]=0;
 _enemy_def[2]=0;
+//敌人弹幕伤害
+_enemy_atk=1
 
 //状态
 _state=-1;
@@ -56,6 +100,7 @@ _menu=-1;
 _menu_choice_button=0;
 _menu_choice_enemy=0;
 _menu_choice_action=0;
+_menu_choice_action_first=0;
 _menu_choice_item=0;
 _menu_choice_item_first=0;
 _menu_choice_mercy=0;
@@ -73,6 +118,7 @@ _menu_fight_anim_time=0;
 _menu_fight_damage_time=0;
 
 _menu_item_used_last=-1;
+_menu_choice_item_secondary=0
 
 _turn_number=0;
 _turn_info=ds_map_create();

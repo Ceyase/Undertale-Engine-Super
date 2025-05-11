@@ -7,7 +7,7 @@ function Battle_SetEnemyActionName() {
 	var ACTION=argument[1];
 	var TEXT=argument[2];
 
-	if(instance_exists(Battle_GetEnemy(ENEMY)) && ACTION>=0 && ACTION<=6){
+	if(instance_exists(Battle_GetEnemy(ENEMY)) && ACTION>=0){
 		battle._enemy_action_name[ENEMY,ACTION]=TEXT;
 		return true;
 	}else{

@@ -31,6 +31,10 @@ function Battle_SetMenu() {
 		repeat(3){
 			var inst=Battle_GetEnemy(proc);
 			if(instance_exists(inst)){
+				a=instance_create_depth(0,0,0,battle_menu_fight_hp_bar)
+				a.enemy_slot=proc
+				a.hp=inst._hp
+				a.hp_max=inst._hpmax
 				if(Battle_IsEnemySpareable(proc)){
 					text+="{color `yellow`}"
 				}
@@ -46,47 +50,39 @@ function Battle_SetMenu() {
 		Battle_SetMenuFightDamageTime(0);
 	
 		var OBJ=Flag_Get(FLAG_TYPE.STATIC,FLAG_STATIC.BATTLE_MENU_FIGHT_OBJ);
+		//var OBJ=battle_menu_fight_knife
 		if(object_exists(OBJ)){
 			if(OBJ==battle_menu_fight||Object_GetBaseParent(OBJ)==battle_menu_fight){
 				instance_create_depth(0,0,0,OBJ);
+				OBJ.image_yscale=OBJ.base_yscale*0.97
+				OBJ.image_xscale=OBJ.base_xscale*1
+				/*OBJ.image_xscale=0
+				OBJ.image_yscale=OBJ._base_yscale*0.97
+				OBJ.image_alpha=0
+				Anim_Create(OBJ,"image_xscale",0,0,0,OBJ._base_xscale*1.05,15);
+				Anim_Create(OBJ,"image_xscale",0,0,OBJ._base_xscale*1.05,-(OBJ._base_xscale*0.06),5,15);
+				Anim_Create(OBJ,"image_alpha",0,0,0,1,10);*/
 			}
 		}
 	}
 	////////////////////////////////////////
 	//行动内容
 	if(MENU==BATTLE_MENU.ACT_ACTION){
-		var ENEMY=Battle_ConvertMenuChoiceEnemyToEnemySlot(Battle_GetMenuChoiceEnemy());
-		var num=Battle_GetEnemyActionNumber(ENEMY);
-	
-		//越界归零
-		if(Battle_GetMenuChoiceAction()>=num){
-			Battle_SetMenuChoiceAction(0,false);
-		}
-	
-		var proc=0;
-		var text="";
-		var text2="";
-		var target=0;
-		//创建行动列表文字
-		repeat(Battle_GetEnemyActionNumber(ENEMY)){
-			if(!target){
-				text+=Battle_GetEnemyActionName(ENEMY,proc)+"&";
-				target=!target;
-			}else{
-				text2+=Battle_GetEnemyActionName(ENEMY,proc)+"&";
-				target=!target;
-			}
-			proc+=1;
-		}
-	
-		Battle_SetDialog(text,true);
-		Battle_SetDialog(text2,true,true);
+		Battle_SetMenuChoiceAction(0,false);
+		instance_create_depth(0,0,0,battle_menu_action_scrollbar);
 	}
 
 	//物品
 	if(MENU==BATTLE_MENU.ITEM){
 		Battle_SetMenuChoiceItem(0,false);
-		instance_create_depth(0,0,0,battle_menu_item_scrollbar);
+		if!(instance_exists(battle_menu_item_scrollbar)){
+		instance_create_depth(0,0,0,battle_menu_item_scrollbar);}
+	}
+	if(MENU==BATTLE_MENU.ITEM_SECONDARY){
+		Battle_SetMenuChoiceItem(Battle_GetMenuChoiceItem(),false);
+		Battle_SetMenuChoiceItemSecondary(0,false);
+		if!(instance_exists(battle_menu_item_scrollbar)){
+		instance_create_depth(0,0,0,battle_menu_item_scrollbar);}
 	}
 
 	//仁慈
@@ -107,12 +103,12 @@ function Battle_SetMenu() {
 				}
 				proc+=1;
 			}
-			text+=Lang_GetString("battle.menu.mercy.spare");
+			text+=GetString("str_battle_spare")
 		
 			//逃跑是否可用
 			if(Battle_IsMenuMercyFleeEnabled()){
 				text+="&{color `white`}";
-				text+=Lang_GetString("battle.menu.mercy.flee");
+			text+=GetString("str_battle_flee")
 			}
 		}else{
 			if(Battle_GetMenuChoiceMercy()>=Battle_GetMenuChoiceMercyOverrideNumber()){

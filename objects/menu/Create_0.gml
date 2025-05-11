@@ -1,7 +1,10 @@
+audio_stop_sound(bgm_menu_spring_autumn)
+audio_stop_sound(bgm_menu_summer)
+audio_stop_sound(bgm_menu_winter)
 _menu=0;
 _mode=0;
 
-_prefix="{gui true}{instant true}{shadow false}{font 1}{scale 2}";
+_prefix="{gui true}{instant true}{shadow false}{font 0}{scale 2}";
 _inst_instruction=noone;
 _inst_begin=noone;
 _inst_settings=noone;
@@ -12,11 +15,14 @@ _inst_room=noone;
 _inst_continue=noone;
 _inst_reset=noone;
 _inst_settings=noone;
+_inst_credits=noone;
+_inst_save_options=noone;
 _inst_naming_title=noone;
 _inst_naming_letters=noone;
 _inst_naming_quit=noone;
 _inst_naming_backspace=noone;
 _inst_naming_done=noone;
+//_inst_naming=noone;
 
 _inst_confirm_title=noone;
 _inst_confirm_yes=noone;

@@ -13,4 +13,4 @@ if(bgm_fade){
 }
 room_goto(target_room);
 fader.color=fade_out_color;
-Fader_Fade(-1,0,fade_out_time/60);
+Fader_Fade(-1,0,fade_out_time);

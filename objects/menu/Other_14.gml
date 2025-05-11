@@ -3,52 +3,35 @@ var text="";
 var valid=true;
 switch(string_lower(_naming_name)){
 	default:
-		text=Lang_GetString("menu.confirm.title");
+		text=GetString("str_menu_naming_check_default")
+		break;
+	case "yuhang":
+		if(global.debug=false){
+		text=""
+		valid=false}
 		break;
 	case "aaaaaa":
-		text=Lang_GetString("menu.confirm.title.aaaaaa");
+	case "aaaaa":
+	case "aaaa":
+	case "aaa":
+	case "aa":
+	case "a":
+	case "111111":
+	case "11111":
+	case "1111":
+	case "111":
+	case "11":
+	case "1":
+	case "123456":
+	case "654321":
+	case "147258":
+		text=GetString("str_menu_naming_check_aaaaaa")
 		break;
-	case "alphys":
-		text=Lang_GetString("menu.confirm.title.alphys");
-		valid=false;
+	case "xmx":
+		if(IsChs()){text="不是你谁啊，真没人在乎[笑哭]"}
 		break;
-	case "alphy":
-		text=Lang_GetString("menu.confirm.title.alphy");
-		break;
-	case "asgore":
-		text=Lang_GetString("menu.confirm.title.asgore");
-		valid=false;
-		break;
-	case "toriel":
-		text=Lang_GetString("menu.confirm.title.toriel");
-		valid=false;
-		break;
-	case "asriel":
-		text=Lang_GetString("menu.confirm.title.asriel");
-		valid=false;
-		break;
-	case "flowey":
-		text=Lang_GetString("menu.confirm.title.flowey");
-		valid=false;
-		break;
-	case "sans":
-		text=Lang_GetString("menu.confirm.title.sans");
-		valid=false;
-		break;
-	case "papyru":
-		text=Lang_GetString("menu.confirm.title.papyru");
-		break;
-	case "undyne":
-		text=Lang_GetString("menu.confirm.title.undyne");
-		valid=false;
-		break;
-	case "mtt":
-	case "metta":
-	case "mett":
-		text=Lang_GetString("menu.confirm.title.mtt");
-		break;
-	case "chara":
-		text=Lang_GetString("menu.confirm.title.chara");
+	case "114514":
+		if(IsChs()){text="你是一个一个一个哼哼啊啊啊啊啊啊啊啊啊啊"}
 		break;
 }
 

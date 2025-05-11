@@ -17,5 +17,6 @@ text_offset_y=0;
 fast=false;
 
 _inst=instance_create_depth(x-left+text_offset_x,y-up+text_offset_y,0,text_typer);
+_inst.enemy_dialog=true
 
 alarm[0]=1;

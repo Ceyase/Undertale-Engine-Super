@@ -1,13 +1,11 @@
 {
-  "$GMScript":"v1",
-  "%Name":"Flag_SetRaw",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"Flag_SetRaw",
-  "parent":{
-    "name":"Flag",
-    "path":"folders/Scripts/Flag.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "Flag_SetRaw",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Flag",
+    "path": "folders/Scripts/Flag.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }
